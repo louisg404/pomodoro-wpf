@@ -1,0 +1,40 @@
+﻿<Window x:Class="pomodoro.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:pomodoro"
+        mc:Ignorable="d"
+        Title="Accueil" Height="500" Width="400">
+    <Grid>
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Top" >
+            <Menu>
+                <MenuItem Header="Se déconnecter" Width="400" Click="Button_Click_Deco"/>
+            </Menu>
+            
+        </StackPanel>
+        <Frame x:Name="Main" Margin="0,40,0,0" NavigationUIVisibility="Hidden"/>
+        
+        <!-- Timer compteur -->
+        <Label x:Name="Timer" FontSize="40" Margin="10,50,10,0" VerticalAlignment="Top" Height="110" Width="198" />
+        <TextBlock x:Name="TravailSum" Text="25'" Margin="10,50,10,0" VerticalAlignment="Top" FontSize="50" />
+
+        <!-- Travail -->
+        <TextBlock x:Name="TextTravail" Text="Temps de travail" HorizontalAlignment="Left" Margin="10,145,0,0" VerticalAlignment="Top" />
+        <Button x:Name="Start" Content="Démarrer" HorizontalAlignment="Left" Margin="10,170,0,0" VerticalAlignment="Top" Padding="5" Background="LimeGreen" BorderBrush="LimeGreen" Foreground="Black" Click="start_click"/>
+        <Button x:Name="Pause" Content="Pause" HorizontalAlignment="Right" Margin="0,170,10,0" VerticalAlignment="Top" Padding="5" Background="Gray" Foreground="White" Click="pause_click"/>
+        <!-- Pause -->
+        <TextBlock x:Name="TextPause" Text="Temps de pause" HorizontalAlignment="Left" Margin="10,145,0,0" VerticalAlignment="Top" />
+        <Button x:Name="Start2" Content="Démarrer" HorizontalAlignment="Left" Margin="10,170,0,0" VerticalAlignment="Top" Padding="5" Background="LimeGreen" BorderBrush="LimeGreen" Foreground="Black" Click="start_click2"/>
+        <Button x:Name="Pause2" Content="Pause" HorizontalAlignment="Right" Margin="0,170,10,0" VerticalAlignment="Top" Padding="5" Background="Gray" Foreground="White" Click="pause_click2"/>
+
+        <!-- Derniers pomodoro -->
+        <TextBlock x:Name="Liste" Text="Historique :" HorizontalAlignment="Left" Margin="10,220,0,0" VerticalAlignment="Top" />
+
+        <TextBlock x:Name="Compteur" Text="" Margin="10,250,0,0" VerticalAlignment="Top" />
+
+        <!-- Sauvegarder le nombre de cycle(s) pomodoro -->
+        <TextBlock x:Name="Info" Text="Terminer un cycle complet pour sauvegarder" HorizontalAlignment="Left" Margin="10,0,0,10" VerticalAlignment="Bottom" />
+        <Button x:Name="Save" Content="Sauvegarder" HorizontalAlignment="Left" Margin="10,0,0,10" VerticalAlignment="Bottom" Padding="5" Background="DeepPink" Foreground="White" Click="save"/>
+    </Grid>
+</Window>
