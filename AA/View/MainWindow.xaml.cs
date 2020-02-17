@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -101,7 +101,7 @@ namespace pomodoro
                     Compteur.Text = compteur;
 
                     indicateur++;
-                    if (indicateur < travailDuree)
+                    if (indicateur < 4)
                     {
                         time = TimeSpan.FromSeconds(pauseDuree);
                     }
@@ -129,7 +129,7 @@ namespace pomodoro
         // Démarrer phase de pause
         public void start_click2(object sender, EventArgs e)
         {
-            if (indicateur < travailDuree)
+            if (indicateur < 4)
             {
                 if (time != TimeSpan.FromSeconds(pauseDuree))
                 {
